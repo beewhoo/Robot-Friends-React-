@@ -26,7 +26,7 @@ class Student extends React.Component {
         <div className='studentContainer'>
             <img src={`${this.props.student.pic}`} alt=""/>
             <div className='studentInfo'>
-                <h2>{this.props.student.firstName} {this.props.student.lastName}</h2>
+                <h2>{this.props.student.firstName.toUpperCase()} {this.props.student.lastName.toUpperCase()}</h2>
                 <p>Email: {this.props.student.email}</p>
                 <p>Company: {this.props.student.company}</p>
                 <p>Skill: {this.props.student.skill}</p>
