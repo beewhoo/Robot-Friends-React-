@@ -10,30 +10,27 @@ body {
 p, h2{
   margin: 0;
   padding:0;
-
 }
-
-
 
 div .wrapper {
     background: #fff;
-      max-width: 550px;
-      overflow: scroll;
-      margin: 100px auto 0;
-      box-shadow: 1px 5px 1em 0px #999;
-      border-radius: 5px;
-      height: 500px;
+    max-width: 550px;
+    overflow: scroll;
+    margin: 100px auto 0;
+    box-shadow: 1px 5px 1em 0px #999;
+    border-radius: 5px;
+    height: 500px;
   }
 
 div .studentContainer {
   border-bottom: 1px solid lightgrey;
-  height: 200px;
+  height: 188px;
 
   }
 
 div .studentContainer img {
   position: relative;
-  top: 30px;
+  top: 17px;
   left: 10px;
   width: 150px;
   border: 2px solid lightgrey;
@@ -54,4 +51,6 @@ div .studentInfo h2 {
 
 div .studentInfo p {
   color: grey;
+  margin-left: 15px;
+  font-size: 14px;
 }

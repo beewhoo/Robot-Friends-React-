@@ -7,9 +7,11 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      students: []
+      students: [],
+      searchValue: '',
 
     }
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -22,12 +24,22 @@ class App extends React.Component {
       });
   }
 
+
+  handleChange(e){
+    this.setState({searchValue: e.target.value})
+  }
+
+
     render() {
-      const students = this.state.students
+      let students = this.state.students.filter((student) => {
+        return student.firstName.toLowerCase().indexOf(this.state.searchValue.toLowerCase()) > -1|| student.lastName.toLowerCase().indexOf(this.state.searchValue.toLowerCase()) > -1 ;
+      });
 
       return (
         <div className='page'>
             <div className='wrapper'>
+             <input type="text" placeholder="Search by name" onChange={this.handleChange}/>
+             {console.log(students)}
                 {students.map((student, key) => {
                   return <Student student={student} key={student.id} />
                 })}

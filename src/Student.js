@@ -9,6 +9,8 @@ class Student extends React.Component {
     }
   }
 
+
+
   render() {
     const grades = this.props.student.grades;
     const numbers = grades.map(Number);
