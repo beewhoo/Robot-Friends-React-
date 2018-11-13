@@ -6,7 +6,6 @@ class Student extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expand: true
     }
   }
 
