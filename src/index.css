@@ -10,6 +10,7 @@ body {
 p, h2{
   margin: 0;
   padding:0;
+  max-width: 500px;
 }
 
 div .wrapper {
@@ -19,38 +20,42 @@ div .wrapper {
     margin: 100px auto 0;
     box-shadow: 1px 5px 1em 0px #999;
     border-radius: 5px;
-    height: 500px;
+    height: 700px;
   }
+
+div .wrapper input {
+  width: 544px;
+}
 
 div .studentContainer {
   border-bottom: 1px solid lightgrey;
-  height: 188px;
+  height: auto;
 
   }
 
 div .studentContainer img {
-  position: relative;
-  top: 17px;
-  left: 10px;
   width: 150px;
   border: 2px solid lightgrey;
   border-radius: 50%;
 }
 
-div .studentInfo {
+div .studentInfo img {
 position: relative;
-left: 184px;
-bottom: 135px;
-width: 300px;
+left: 30px;
+top: 54px;
+
 }
 
-div .studentInfo h2 {
-  font-size: 2em;
-  margin-bottom: 0;
+div .studentInfo button {
+  position: relative;
+bottom: 108px;
+left: 485px;
+font-size: 1.5em;
 }
 
-div .studentInfo p {
-  color: grey;
-  margin-left: 15px;
-  font-size: 14px;
+
+div .info {
+position: relative;
+left: 50%;
+bottom: 80px;
 }
