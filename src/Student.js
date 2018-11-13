@@ -22,7 +22,7 @@ class Student extends React.Component {
     }
 
     return (
-      <div className='mainContainer'>
+
         <div className='studentContainer'>
             <img src={`${this.props.student.pic}`} alt=""/>
             <div className='studentInfo'>
@@ -33,7 +33,7 @@ class Student extends React.Component {
                 <p>Average: {average}% </p>
             </div>
         </div>
-      </div>
+
     )
   }
 }
