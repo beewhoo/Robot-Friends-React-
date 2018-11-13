@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e5e5e5;
+  font-family: sans-serif;
+}
+
+div .wrapper {
+    background: #fff;
+      padding: .5em 1.6em .5em;
+      max-width: 600px;
+      margin: 100px auto 0;
+      box-shadow: 1px 5px 1em 0px #999;
+      border-radius: 5px;
+  }
