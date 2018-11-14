@@ -10,8 +10,10 @@ class App extends React.Component {
       students: [],
       searchValue: '',
 
+
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleTagChange = this.handleTagChange.bind(this);
   }
 
   componentDidMount() {
@@ -28,6 +30,11 @@ class App extends React.Component {
   handleChange(e){
     this.setState({searchValue: e.target.value})
   }
+  handleTagChange(e){
+    this.setState({tagSearchValue: e.target.value})
+  }
+
+
 
 
     render() {
@@ -38,7 +45,8 @@ class App extends React.Component {
       return (
 
             <div className='wrapper'>
-             <input type="text" placeholder="Search by name" onChange={this.handleChange}/>
+             <input type="text" placeholder="search by name" onChange={this.handleChange}/>
+             <input type="text" placeholder="search by tag" onChange={this.handleTagChange}/>
              {console.log(students)}
                 {students.map((student, key) => {
                   return <Student student={student} key={student.id} />

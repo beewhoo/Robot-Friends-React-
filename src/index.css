@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   color:grey;
+  font-family:sans-serif;
 }
 
 h2, p, li, div, ul {
@@ -53,9 +54,13 @@ h2 {
   left: 10px;
 }
 
+.details p {
+  margin-left: 20px;
+}
+
 
 .grades {
-  margin-left: 169px;
+  margin-left: 190px;
 }
 
 .studentInfo button {
