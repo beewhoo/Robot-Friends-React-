@@ -1,61 +1,73 @@
 html {
   box-sizing: border-box;
+  color:grey;
 }
 
-body {
-  background: #e5e5e5;
-  font-family: sans-serif;
+h2, p, li, div, ul {
+  margin:0;
+  padding: 0;
 }
 
-p, h2{
-  margin: 0;
-  padding:0;
-  max-width: 500px;
+h2 {
+  font-size: 2.4em;
+  color:black;
 }
 
-div .wrapper {
-    background: #fff;
-    max-width: 550px;
-    overflow: scroll;
-    margin: 100px auto 0;
+.wrapper{
+    padding: .5em 1.6em .5em;
+    max-width: 650px;
+    margin: 70px auto 0;
     box-shadow: 1px 5px 1em 0px #999;
     border-radius: 5px;
-    height: 700px;
-  }
-
-div .wrapper input {
-  width: 544px;
+    height: 500px;
+    overflow: scroll;
 }
 
-div .studentContainer {
+.wrapper input {
+  border:none;
   border-bottom: 1px solid lightgrey;
-  height: auto;
+  width: 650px;
 
-  }
+}
+.wrapper input:focus {
+  border:none;
+  outline: 0;
+  font-size: 1.4em;
+}
 
-div .studentContainer img {
+.studentInfo {
+  border-bottom: 1px solid lightgrey;
+}
+
+
+.info img {
   width: 150px;
-  border: 2px solid lightgrey;
   border-radius: 50%;
+  border: 1px solid grey;
 }
 
-div .studentInfo img {
-position: relative;
-left: 30px;
-top: 54px;
-
-}
-
-div .studentInfo button {
+.details {
+  display: inline-block;
   position: relative;
-bottom: 108px;
-left: 485px;
-font-size: 1.5em;
+  bottom: 20px;
+  left: 10px;
 }
 
 
-div .info {
-position: relative;
-left: 50%;
-bottom: 80px;
+.grades {
+  margin-left: 169px;
+}
+
+.studentInfo button {
+  position: relative;
+  left: 550px;
+  top: 10px;
+  font-size: 2em;
+  color: grey;
+  border: none;
+}
+
+.studentInfo button:focus {
+  outline: 0;
+  border: none;
 }

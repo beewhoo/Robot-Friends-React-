@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-const TestResults = (props) => {
+const Tests = (props) => {
   if(!props.clicked){
     return <ul>
       <p>Test {props.testNumber} <span>{props.num}%</span></p>
@@ -12,4 +12,4 @@ const TestResults = (props) => {
   }
 }
 
-export default TestResults;
+export default Tests;

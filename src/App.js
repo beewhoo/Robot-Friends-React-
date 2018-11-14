@@ -36,7 +36,7 @@ class App extends React.Component {
       });
 
       return (
-        <div className='page'>
+
             <div className='wrapper'>
              <input type="text" placeholder="Search by name" onChange={this.handleChange}/>
              {console.log(students)}
@@ -44,7 +44,6 @@ class App extends React.Component {
                   return <Student student={student} key={student.id} />
                 })}
           </div>
-        </div>
       )
     }
 }

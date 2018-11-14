@@ -1,5 +1,5 @@
 import React from 'react';
-import TestResults from './TestResults'
+import Tests from './Tests'
 
 
 
@@ -27,7 +27,7 @@ class Student extends React.Component {
 
     return (
 
-        <div className='studentContainer'>
+
 
 
 
@@ -41,25 +41,31 @@ class Student extends React.Component {
                       : <i className="fas fa-minus"></i>
                     }
                     </button>
+
+
+              <div className= 'info'>
                 <img src={`${this.props.student.pic}`} alt=""/>
-                <div className= 'info'>
+
+              <div className = 'details'>
                 <h2>{this.props.student.firstName.toUpperCase()} {this.props.student.lastName.toUpperCase()}</h2>
                 <p>Email: {this.props.student.email}</p>
                 <p>Company: {this.props.student.company}</p>
                 <p>Skill: {this.props.student.skill}</p>
                 <p>Average: {average}% </p>
-                <div className='grades'>
+              </div>
+                  <div className='grades'>
                   {grades.map((num, key) => {
-                    return <TestResults num={num} clicked={this.state.expand} testNumber={key + 1 } key={key}/>
+                    return <Tests num={num} clicked={this.state.expand} testNumber={key + 1 } key={key}/>
                   })}
-                </div>
+                  </div>
 
-                </div>
+
+
+              </div>
 
             </div>
 
 
-        </div>
 
     )
   }
