@@ -1,5 +1,6 @@
 import React from 'react';
 import Tests from './Tests'
+import Tag from './Tag'
 
 
 
@@ -44,22 +45,22 @@ class Student extends React.Component {
 
 
               <div className= 'info'>
-                <img src={`${this.props.student.pic}`} alt=""/>
+                  <img src={`${this.props.student.pic}`} alt=""/>
 
-              <div className = 'details'>
-                <h2>{this.props.student.firstName.toUpperCase()} {this.props.student.lastName.toUpperCase()}</h2>
-                <p>Email: {this.props.student.email}</p>
-                <p>Company: {this.props.student.company}</p>
-                <p>Skill: {this.props.student.skill}</p>
-                <p>Average: {average}% </p>
-              </div>
-                  <div className='grades'>
-                  {grades.map((num, key) => {
-                    return <Tests num={num} clicked={this.state.expand} testNumber={key + 1 } key={key}/>
-                  })}
-                  </div>
+                <div className = 'details'>
+                  <h2>{this.props.student.firstName.toUpperCase()} {this.props.student.lastName.toUpperCase()}</h2>
+                  <p>Email: {this.props.student.email}</p>
+                  <p>Company: {this.props.student.company}</p>
+                  <p>Skill: {this.props.student.skill}</p>
+                  <p>Average: {average}% </p>
+                </div>
 
-
+                <div className='grades'>
+                    {grades.map((num, key) => {
+                      return <Tests num={num} clicked={this.state.expand} testNumber={key + 1 } key={key}/>
+                    })}
+                    <Tag onSubmit={this.addTag} value={this.state.tagValue} onChange={this.handleTagChange}/>
+                </div>
 
               </div>
 

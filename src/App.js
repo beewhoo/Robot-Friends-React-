@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Student from './Student';
+import Tag from './Tag'
 
 class App extends React.Component {
   constructor(){
@@ -9,11 +10,14 @@ class App extends React.Component {
     this.state = {
       students: [],
       searchValue: '',
+      tags: [],
+      tagSearchValue: '',
 
 
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleTagChange = this.handleTagChange.bind(this);
+    this.addTag = this.addTag.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +38,16 @@ class App extends React.Component {
     this.setState({tagSearchValue: e.target.value})
   }
 
+  addTag(e) {
+  e.preventDefault();
+  const newTagName = {value: this.state.tagValue}
+  const newTagArray = Array.from(this.state.tags)
+  newTagArray.push(newTagName);
+  this.setState({
+    tags: newTagArray,
+    tagSearchValue: ''
+  })
+}
 
 
 
@@ -47,10 +61,11 @@ class App extends React.Component {
             <div className='wrapper'>
              <input type="text" placeholder="search by name" onChange={this.handleChange}/>
              <input type="text" placeholder="search by tag" onChange={this.handleTagChange}/>
-             {console.log(students)}
+
                 {students.map((student, key) => {
                   return <Student student={student} key={student.id} />
                 })}
+    
           </div>
       )
     }
