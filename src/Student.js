@@ -35,6 +35,8 @@ class Student extends React.Component {
 
             <div className='studentInfo'>
 
+
+
             <button onClick={() =>
                     this.setState({ expand: !this.state.expand })}>
                     {this.state.expand
@@ -58,8 +60,9 @@ class Student extends React.Component {
                   {grades.map((num, key) => {
                     return <Tests num={num} clicked={this.state.expand} testNumber={key + 1 } key={key}/>
                   })}
-                  <Tag tagValue={this.props.tagValue} students={this.props.studentsArray}/>
+
                   </div>
+                  <Tag tagValue={this.props.tagValue} students={this.props.studentsArray}/>
 
 
 

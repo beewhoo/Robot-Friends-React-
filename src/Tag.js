@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class Tag extends React.Component {
   constructor(props) {
     super(props);
@@ -36,15 +37,18 @@ export default class Tag extends React.Component {
   render(){
     return (
       <div>
+
         {this.state.tags.map((tag, i) => {
             return (
+
+
               <div key={i} className="tags">
                   <p>{tag.value}</p>
               </div>
             )
           })}
         <form action="" onSubmit={this.addTag}>
-          <input className="addTag" type="text" name="tagValue" value={this.state.tagValue} onChange={this.handleTagChange} placeholder="Add a tag" />
+          <input className="addTag" type="text" name="tagValue" value={this.state.tagValue} onChange={this.handleTagChange}  placeholder="Add a tag" />
         </form>
       </div>
     )

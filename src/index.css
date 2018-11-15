@@ -14,6 +14,12 @@ h2 {
   color:black;
 }
 
+.title {
+  text-align: center;
+  color: indianred;
+  margin-bottom: 1em;
+}
+
 .wrapper{
     padding: .5em 1.6em .5em;
     max-width: 650px;
@@ -75,4 +81,22 @@ h2 {
 .studentInfo button:focus {
   outline: 0;
   border: none;
+}
+
+.tags {
+  background-color: hsla(183, 81%, 51%, 0.9411764705882353);
+  display: inline-block;
+  color: #201c1c;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+
+}
+
+.tags p {
+  display: inline-flex;
+}
+
+.addTag {
+  margin-top: 10px;
 }

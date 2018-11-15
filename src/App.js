@@ -4,18 +4,26 @@ import axios from 'axios';
 import Student from './Student';
 
 
+
 class App extends React.Component {
   constructor(){
     super();
     this.state = {
       students: [],
       searchValue: '',
-
-
+      tags: ''
 
     }
     this.handleChange = this.handleChange.bind(this);
+    this.changeTag = this.changeTag.bind(this);
   }
+
+changeTag(tags){
+  this.setState({
+    tags: tags
+  })
+}
+
 
   componentDidMount() {
     axios.get(`https://www.hatchways.io/api/assessment/students`, {
@@ -43,9 +51,10 @@ class App extends React.Component {
       return (
 
             <div className='wrapper'>
+                <h2 className = 'title'> ROBOT STUDENTS </h2>
              <input type="text" placeholder="search by name" onChange={this.handleChange}/>
-             <input type="text" placeholder="search by tag" onChange={this.handleTagChange}/>
-        
+
+
                 {students.map((student, key) => {
                   return <Student student={student} key={student.id} />
                 })}
